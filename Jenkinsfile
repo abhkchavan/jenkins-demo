@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git branch: 'main',
-                    url: 'git@github.com:abhkchavan/jenkins-demo.git'
-            }
-        }
 
         stage('Build') {
             steps {
