@@ -29,7 +29,7 @@ pipeline {
 	stage('Docker deploy'){
 	    steps{
               sh '''	
-		docker run -d --name jenkinsapp -p 80811:8081 jenkins-demo:1.0
+		docker run -d --name jenkinsapp -p 8081:8081 jenkins-demo:1.0
 		
 		sleep 3
 		
