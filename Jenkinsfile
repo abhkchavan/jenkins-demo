@@ -43,7 +43,7 @@ pipeline {
             docker stop jenkinsapp || true
             docker rm jenkinsapp || true
 
-            docker run -d --name jenkinsapp -p 8081:8081 jenkins-demo:${DOCKER_VERSION}
+            docker run -d --name jenkinsapp -p 8081:8081 jenkins-demo:${VERSION}
 
             sleep 3
 
