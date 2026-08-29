@@ -13,7 +13,7 @@ public class App {
         );
 
         server.createContext("/", exchange -> {
-            String response = "Hello from Jenkins + Docker CI/CD!";
+            String response = "Hello from Jenkins + Docker CI/CD - Version 1.0.3!";
             exchange.sendResponseHeaders(200, response.length());
             exchange.getResponseBody().write(response.getBytes());
             exchange.close();
