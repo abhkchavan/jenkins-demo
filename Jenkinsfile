@@ -29,7 +29,7 @@ pipeline {
 	stage('Docker deploy'){
 	    steps{
               sh '''	
-		docker stops jenkinsapp || true
+		docker stop jenkinsapp || true
 		docker rm jenkinsapp || true
 		docker run -d --name jenkinsapp -p 8081:8081 jenkins-demo:1.0
 		
