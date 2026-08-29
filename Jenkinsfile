@@ -21,6 +21,17 @@ pipeline {
                 sh 'ls -lh target/'
             }
         }
+	stage('Verify Source') {
+    steps {
+        sh '''
+            echo "===== App.java ====="
+            cat src/main/java/com/example/App.java
+
+            echo "===== JAR timestamp ====="
+            ls -lh target/jenkins-demo-1.0-SNAPSHOT.jar
+        '''
+    }
+}
 	stage('Docker Build'){
 	    steps {
 		sh 'docker build -t jenkins-demo:1.0 .'
