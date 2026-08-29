@@ -21,5 +21,10 @@ pipeline {
                 sh 'ls -lh target/'
             }
         }
+	stage('Docker Build'){
+	    steps {
+		sh 'docker build -t jenkins-demo:1.0 .'
+	    }
+	}
     }
 }
