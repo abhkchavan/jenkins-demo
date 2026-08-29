@@ -30,7 +30,21 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.5.3</version>
             </plugin>
-        </plugins>
-    </build>
+        
+    
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-jar-plugin</artifactId>
+    <version>3.4.2</version>
+    <configuration>
+        <archive>
+            <manifest>
+                <mainClass>com.example.App</mainClass>
+            </manifest>
+        </archive>
+    </configuration>
+</plugin>
+</plugins>
+</build>
 
 </project>
