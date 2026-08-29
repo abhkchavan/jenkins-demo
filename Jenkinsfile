@@ -28,7 +28,7 @@ pipeline {
             cat src/main/java/com/example/App.java
 
             echo "===== JAR timestamp ====="
-            ls -lh target/jenkins-demo-1.0-SNAPSHOT.jar
+            ls -lh target/jenkins-demo-${VERSION}.jar
         '''
     }
 }
