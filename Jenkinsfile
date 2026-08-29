@@ -26,5 +26,18 @@ pipeline {
 		sh 'docker build -t jenkins-demo:1.0 .'
 	    }
 	}
+	stage('Docker deploy'){
+	    steps{
+              sh '''	
+		docker run -d --name jenkinsapp -p 80811:8081 jenkins-demo:1.0
+		
+		sleep 3
+		
+		docker ps
+		curl -f http://localhost:8081
+
+	      '''
+	    }
+	}
     }
 }
